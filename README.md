@@ -1,6 +1,6 @@
 # XAVA - Xtreme Access via Algorithms
 
-![Logo X.A.V](XAV-logo.png)
+<img src="XAV-logo.png" alt="Logo X.A.V" width="300"/>
 
 **XAVA** é uma ferramenta moderna e altamente personalizável para testes de força bruta no login web do Instagram, desenvolvida com foco em **segurança ofensiva, evasão e desempenho assíncrono**.
 

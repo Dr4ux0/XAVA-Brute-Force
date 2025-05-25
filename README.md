@@ -1,30 +1,111 @@
 # SALAX
 
-# SALAX - Instagram Bruteforce Tester (Para fins educacionais)
 
-**Salax** é um script avançado de brute force assíncrono desenvolvido para **fins educacionais e testes de segurança em ambientes controlados**. Ele simula tentativas de login no Instagram utilizando múltiplas senhas de forma paralela e discreta, respeitando técnicas modernas de evasão e requisições similares às reais feitas por navegadores.
+# SALAX - BruteForce Avançado para Instagram (Edição 2025)
 
-> **Atenção:** Este projeto é destinado apenas ao uso **ético**, em ambientes **legitimamente autorizados**. Qualquer uso fora desses termos é de total responsabilidade do operador.
+**Salax** é uma ferramenta moderna e altamente personalizada para testes de força bruta no login web do Instagram, desenvolvida com **foco em análise de segurança, evasão e velocidade assíncrona**.
 
----
-
-## Características
-
-- [x] Geração dinâmica de `enc_password`
-- [x] Requisições HTTPS realistas com headers atualizados
-- [x] Extração automática de `csrf_token`, `device_id` e `mid`
-- [x] Compatível com proxy (BrightData ou direto)
-- [x] Assíncrono com `aiohttp` para maior desempenho
-- [x] Respostas do servidor visíveis para debugging
-- [x] Modo stealth com cookies e headers personalizáveis
+Criado para fins **educacionais**, **pentests com autorização** e **pesquisa sobre autenticação web**, Salax entrega desempenho, modularidade e precisão.
 
 ---
 
-## Requisitos
+## âš ï¸ AVISO LEGAL
+
+Este software é fornecido **exclusivamente para uso ético e educacional**. O uso indevido da ferramenta para fins ilegais ou sem permissão é **estritamente proibido**. O autor **não se responsabiliza** por qualquer ação imprópria.
+
+---
+
+## Funcionalidades
+
+- [x] Login Web AJAX do Instagram 2025
+- [x] Geração automática de `enc_password` com timestamp válido
+- [x] Coleção dinâmica de:
+  - `csrf_token`
+  - `id_do_dispositivo`
+  - `meio`
+- [x] Suporte a cookies e cabeçalhos legítimos
+- [x] Detecção de sucesso via `checkpoint_url` ou `userId`
+- [x] Execução de assinatura com `aiohttp` e `ClientSession`
+- [x] Atrasos programados para reduzir bloqueios
+- [x] Totalmente **sem dependência de proxies** (modo stealth)
+
+---
+
+## Pré-requisitos
 
 - Python 3.8+
-- Termux, Linux ou ambiente com suporte a SSL + asyncio
-- Instalar dependências:
+- Termux, Linux, WSL ou ambiente com suporte a SSL e assíncrono
+- Instalar as dependências:
 
 ```bash
-pip install aiohttp aiohttp-socks requests
+pip install aiohttp solicitações
+```
+
+---
+
+## Uso
+
+```bash
+python salax.py
+```
+
+### Entradas
+
+- `Username:` ​​Nome do usuário alvo do Instagram
+- `Arquivo de lista de senhas:` Caminho para o arquivo de senhas (`pass.txt`)
+
+### Exemplo
+
+```bash
+Nome de usuário: verve15k
+Arquivo de lista de senhas: pass.txt
+```
+
+### Saidatenta
+
+```bash
+[+] Sucesso -> verve15k:senha123
+```
+
+Em caso de sucesso, a combinação é salva no arquivo `good.txt`.
+
+---
+
+## Arquitetura
+
+- **Sincronização total com headers e cookies esperados pela web do Instagram**
+- **Efetue login via endpoint oficial `ajax/login`**
+- **Ignorar SSL com `verify=False`**
+- **Assincrono para máximo throughput, mesmo com delays anti-bloqueio**
+
+---
+
+## Estrutura do Código
+
+- `Logo()` – Apresentação visual da ferramenta
+- `GetCSRF_Token()` – Captura de CSRF + device_id da página
+- `Get_MID()` – Obter o cookie `mid` via `shared_data`
+- `generate_enc_password()` – Geração legítima do campo de senha criptografada
+- `attempt_login()` – Envia o POST com o pacote completo
+- `main()` – Gerencia execuções, atrasos e atrasos
+
+---
+
+## Contribuição
+
+Deseja expandir uma ferramenta? Garfo. Teste, ajuste, veja melhorias.
+
+---
+
+## Autor
+
+**FaLaH**  
+E-mail: `flaaah777@gmail.com`  
+Instagram: `@root.falah`  
+Pesquisador de desenvolvimento subterrâneo e segurança ofensiva
+
+---
+
+## Licença
+
+Licença MIT – Faça que quiser, **desde que com ética e ciência**.

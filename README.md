@@ -1,8 +1,8 @@
-# SALAX - Ferramenta Avançada de Força Bruta para Instagram (Edição 2025)
+# XAVA - Xtreme Access via Algorithms
 
-**Salax** é uma ferramenta moderna e altamente personalizável para testes de força bruta no login web do Instagram, desenvolvida com foco em **segurança ofensiva, evasão e desempenho assíncrono**.
+**XAVA** é uma ferramenta moderna e altamente personalizável para testes de força bruta no login web do Instagram, desenvolvida com foco em **segurança ofensiva, evasão e desempenho assíncrono**.
 
-Criada para fins **educacionais**, **testes de intrusão autorizados** e **pesquisas sobre autenticação web**, Salax entrega desempenho, modularidade e precisão.
+Criada para fins **educacionais**, **testes de intrusão autorizados** e **pesquisas sobre autenticação web**, XAVA entrega desempenho, modularidade e precisão.
 
 ---
 
@@ -55,19 +55,19 @@ pip install aiohttp requests aiohttp_socks urllib3 itertools
 ## Uso
 
 ```bash
-python salax.py
+python main.py
 ```
 
 ### Entradas
 
-* `Nome de usuário:` Nome do usuário alvo do Instagram
-* `Arquivo de senhas:` Caminho para o arquivo de senhas (`pass.txt`)
+* `Username:` Nome do usuário alvo do Instagram
+* `Password File:` Caminho para o arquivo de senhas (`pass.txt`)
 
 ### Exemplo
 
 ```bash
-Nome de usuário: luizinho33k
-Arquivo de senhas: pass.txt
+Username: luizinho33k
+Password File: pass.txt
 ```
 
 ### Saída esperada

@@ -46,7 +46,7 @@ python -m venv venv
 source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate    # Windows
 ```
-## Dependecias
+## Dependêcias
 
 ```bash
 pip install aiohttp requests aiohttp_socks urllib3 itertools

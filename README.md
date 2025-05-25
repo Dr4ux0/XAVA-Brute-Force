@@ -1,4 +1,5 @@
-# SALAX---THIS-IS-BRUTE-FORCE
+# SALAX
+
 # SALAX - Instagram Bruteforce Tester (Para fins educacionais)
 
 **Salax** é um script avançado de brute force assíncrono desenvolvido para **fins educacionais e testes de segurança em ambientes controlados**. Ele simula tentativas de login no Instagram utilizando múltiplas senhas de forma paralela e discreta, respeitando técnicas modernas de evasão e requisições similares às reais feitas por navegadores.

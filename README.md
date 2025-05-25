@@ -47,7 +47,7 @@ venv\Scripts\activate    # Windows
 
 
 ```bash
-pip install aiohttp requests aiohttp_socks urllib3
+pip install aiohttp requests aiohttp_socks urllib3 itertools
 ```
 
 ---

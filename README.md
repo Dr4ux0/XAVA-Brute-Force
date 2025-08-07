@@ -62,7 +62,7 @@ python main.py
 
 ### Entradas
 
-* `Username:` Nome do usuário alvo do Instagram
+* `Username:` Nome do usuário
 * `Password File:` Caminho para o arquivo de senhas (`pass.txt`)
 
 ### Exemplo
@@ -79,26 +79,6 @@ Password File: pass.txt
 ```
 
 Em caso de sucesso, a combinação é salva no arquivo `good.txt`.
-
----
-
-## Arquitetura
-
-* **Total sincronização com headers e cookies esperados pelo Instagram Web**
-* **Login através do endpoint oficial `ajax/login`**
-* **Ignora verificação SSL com `verify=False`**
-* **Assíncrono para maior desempenho, mesmo com atrasos anti-bloqueio**
-
----
-
-## Estrutura do Código
-
-* `Logo()` – Exibe o banner da ferramenta
-* `GetCSRF_Token()` – Captura o CSRF token e `device_id`
-* `Get_MID()` – Obtém o cookie `mid` via `shared_data`
-* `generate_enc_password()` – Geração legítima do campo de senha criptografada
-* `attempt_login()` – Envia o POST com todos os dados
-* `main()` – Gerencia as execuções, tentativas e atrasos
 
 ---
 

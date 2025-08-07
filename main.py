@@ -27,8 +27,6 @@ def Logo():
         [ Editing by Dr4ux0]
     ''' + end_color)
 
-
-# Obter CSRF Token e Device ID
 def GetCSRF_Token():
     headers = {
         'Host': 'www.instagram.com',
@@ -45,8 +43,6 @@ def GetCSRF_Token():
 
     return csrf_token_value, device_id
 
-
-# Obter MID
 def Get_MID(csrf_token_value):
     cookies = {'csrftoken': csrf_token_value}
     headers = {
@@ -58,7 +54,6 @@ def Get_MID(csrf_token_value):
     response = requests.get('https://www.instagram.com/api/v1/web/data/shared_data/', cookies=cookies, headers=headers, verify=False)
     mid = re.search(r'mid=([^;]+)', response.headers.get('Set-Cookie', ''))
     return mid.group(1) if mid else None
-
 
 # Gerar senha com timestamp
 def generate_enc_password(password):
